@@ -7,13 +7,17 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="1.MySQL的Lunix版的安装1.前往mysql官网下载地址下载rpm安装包，上传MySQL-client-5.5.52-1.el6.x86_64.rpm，MySQL-server-5.5.52-1.el6.x86_64.rpmRPM包到opt目录下2.检查当前系统是否安装过mysql12[root@mysql-master opt]# rpm -qa|grep -i mysql //查询命令">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/07/17/mysql主从复制的安装/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.MySQL的Lunix版的安装1.前往mysql官网下载地址下载rpm安装包，上传MySQL-client-5.5.52-1.el6.x86_64.rpm，MySQL-server-5.5.52-1.el6.x86_64.rpmRPM包到opt目录下2.检查当前系统是否安装过mysql12[root@mysql-master opt]# rpm -qa|grep -i mysql //查询命令">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-17T02:46:00.495Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="1.MySQL的Lunix版的安装1.前往mysql官网下载地址下载rpm安装包，上传MySQL-client-5.5.52-1.el6.x86_64.rpm，MySQL-server-5.5.52-1.el6.x86_64.rpmRPM包到opt目录下2.检查当前系统是否安装过mysql12[root@mysql-master opt]# rpm -qa|grep -i mysql //查询命令">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,9 +64,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-mysql主从复制的安装" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-mysql主从复制的安装" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/07/17/mysql主从复制的安装/" class="article-date">
   <time datetime="2018-07-17T02:46:51.507Z" itemprop="datePublished">2018-07-17</time>
@@ -100,76 +102,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-使用hexo快速搭建博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/07/17/使用hexo快速搭建博客/" class="article-date">
-  <time datetime="2018-07-17T01:33:29.120Z" itemprop="datePublished">2018-07-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="使用hexo快速搭建博客"><a href="#使用hexo快速搭建博客" class="headerlink" title="使用hexo快速搭建博客"></a>使用hexo快速搭建博客</h1><h4 id="1-准备安装环境"><a href="#1-准备安装环境" class="headerlink" title="1. 准备安装环境"></a>1. 准备安装环境</h4><ul>
-<li>node.js </li>
-<li>git </li>
-<li>hexo</li>
-</ul>
-<h5 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h5><ol>
-<li><p>node.js的下载</p>
-<p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">下载地址</a></p>
-</li>
-<li><p>安装时选择默认的配置即可。</p>
-</li>
-<li><p>运行cmd命令，检查node和npm安装是否成功。</p>
-</li>
-</ol>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">v8.<span class="number">11</span>.<span class="number">3</span></span><br><span class="line"></span><br><span class="line">npm -v</span><br><span class="line"><span class="number">5</span>.<span class="number">6</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure>
-<h5 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h5><ol>
-<li>git的下载地址</li>
-</ol>
-<p>​        <a href="https://git-scm.com/" target="_blank" rel="noopener">下载地址</a></p>
-<ol start="2">
-<li>运行Git Bash Here验证安装是否成功</li>
-</ol>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git --<span class="keyword">version</span></span><br><span class="line">git <span class="keyword">version</span> <span class="number">2.16</span>.<span class="number">2</span>.windows.<span class="number">1</span></span><br></pre></td></tr></table></figure>
-<h5 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h5><ol>
-<li>hexo的镜像下载、安装与验证是否成功</li>
-</ol>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g cnpm --registry=http<span class="variable">s:</span>//registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$ cnpm install -g hexo-<span class="keyword">cl</span></span><br><span class="line"></span><br><span class="line">$ cnpm install hexo --save</span><br><span class="line"></span><br><span class="line">$ hexo -v</span><br><span class="line">hexo-cli: <span class="number">1.1</span>.<span class="number">0</span></span><br><span class="line"><span class="keyword">o</span><span class="variable">s:</span> Windows_NT <span class="number">10.0</span>.<span class="number">17134</span> win32 x64</span><br><span class="line">http_parser: <span class="number">2.8</span>.<span class="number">0</span></span><br><span class="line">node: <span class="number">8.11</span>.<span class="number">3</span></span><br><span class="line">v8: <span class="number">6.2</span>.<span class="number">414.54</span></span><br><span class="line"><span class="keyword">u</span><span class="variable">v:</span> <span class="number">1.19</span>.<span class="number">1</span></span><br><span class="line">zli<span class="variable">b:</span> <span class="number">1.2</span>.<span class="number">11</span></span><br><span class="line">are<span class="variable">s:</span> <span class="number">1.10</span>.<span class="number">1</span>-DEV</span><br><span class="line">module<span class="variable">s:</span> <span class="number">57</span></span><br><span class="line">nghttp2: <span class="number">1.32</span>.<span class="number">0</span></span><br><span class="line">napi: <span class="number">3</span></span><br><span class="line">openss<span class="variable">l:</span> <span class="number">1.0</span>.<span class="number">2</span><span class="keyword">o</span></span><br><span class="line">icu: <span class="number">60.1</span></span><br><span class="line">unicode: <span class="number">10.0</span></span><br><span class="line">cldr: <span class="number">32.0</span></span><br><span class="line">tz: <span class="number">2017</span><span class="keyword">c</span></span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>hexo初始化</li>
-</ol>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br><span class="line">INFO  Cloning hexo-starter <span class="keyword">to</span> D:\Hexo\hexo</span><br><span class="line">Cloning into <span class="string">'D:\Hexo\hexo'</span>...</span><br><span class="line">remote: Counting object<span class="variable">s:</span> <span class="number">65</span>, done.</span><br><span class="line">remote: Total <span class="number">65</span> (delta <span class="number">0</span>), reused <span class="number">0</span> (delta <span class="number">0</span>), pack-reused <span class="number">65</span></span><br><span class="line">Unpacking object<span class="variable">s:</span> <span class="number">100</span>% (<span class="number">65</span>/<span class="number">65</span>), done.</span><br><span class="line">Submodule <span class="string">'themes/landscape'</span> (http<span class="variable">s:</span>//github.<span class="keyword">com</span>/hexojs/hexo-theme-landscape.git) registered <span class="keyword">for</span> path <span class="string">'themes/landscape'</span></span><br><span class="line">Cloning into <span class="string">'D:/Hexo/hexo/themes/landscape'</span>...</span><br><span class="line">remote: Counting object<span class="variable">s:</span> <span class="number">824</span>, done.</span><br><span class="line">remote: Total <span class="number">824</span> (delta <span class="number">0</span>), reused <span class="number">0</span> (delta <span class="number">0</span>), pack-reused <span class="number">823</span></span><br><span class="line">Receiving object<span class="variable">s:</span> <span class="number">100</span>% (<span class="number">824</span>/<span class="number">824</span>), <span class="number">2.54</span> MiB | <span class="number">169.00</span> KiB/s, done.</span><br><span class="line">Resolving delta<span class="variable">s:</span> <span class="number">100</span>% (<span class="number">435</span>/<span class="number">435</span>), done.</span><br><span class="line">Submodule path <span class="string">'themes/landscape'</span>: checked out <span class="string">'73a23c51f8487cfcd7c6deec96ccc7543960d350'</span></span><br><span class="line">INFO  Install dependencies</span><br><span class="line">npm WARN deprecated titlecase@<span class="number">1.1</span>.<span class="number">2</span>: <span class="keyword">no</span> longer maintained</span><br><span class="line"></span><br><span class="line">&gt; nunjucks@<span class="number">3.1</span>.<span class="number">3</span> postinstall D:\Hexo\hexo\node_modules\nunjucks</span><br><span class="line">&gt; node postinstall-build.js src</span><br><span class="line"></span><br><span class="line">npm notice created <span class="keyword">a</span> lockfile <span class="keyword">as</span> package-lock.json. You should commit this <span class="keyword">file</span>.</span><br><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@<span class="number">1.2</span>.<span class="number">4</span> (node_modules\fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform <span class="keyword">for</span> fsevents@<span class="number">1.2</span>.<span class="number">4</span>: wanted &#123;<span class="string">"os"</span>:<span class="string">"darwin"</span>,<span class="string">"arch"</span>:<span class="string">"any"</span>&#125; (curren<span class="variable">t:</span> &#123;<span class="string">"os"</span>:<span class="string">"win32"</span>,<span class="string">"arch"</span>:<span class="string">"x64"</span>&#125;)</span><br><span class="line"></span><br><span class="line">added <span class="number">398</span> packages in <span class="number">151.467</span>s</span><br><span class="line">INFO  Start blogging with Hexo!</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>生成本地博客文件</li>
-</ol>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in <span class="number">158</span> ms</span><br><span class="line">INFO  Generated: <span class="built_in">index</span>.html</span><br><span class="line">INFO  Generated: archives/<span class="built_in">index</span>.html</span><br><span class="line">INFO  Generated: fancybox/fancybox_loading.gif</span><br><span class="line">INFO  Generated: fancybox/jquery.fancybox.css</span><br><span class="line">INFO  Generated: archives/<span class="number">2018</span>/<span class="built_in">index</span>.html</span><br><span class="line">INFO  Generated: fancybox/fancybox_sprite.png</span><br><span class="line">INFO  Generated: fancybox/fancybox_loading@<span class="number">2</span><span class="keyword">x</span>.gif</span><br><span class="line">INFO  Generated: fancybox/blank.gif</span><br><span class="line">INFO  Generated: fancybox/fancybox_overlay.png</span><br><span class="line">INFO  Generated: fancybox/fancybox_sprite@<span class="number">2</span><span class="keyword">x</span>.png</span><br><span class="line">INFO  Generated: fancybox/jquery.fancybox.pack.js</span><br><span class="line">INFO  Generated: fancybox/jquery.fancybox.js</span><br><span class="line">INFO  Generated: css/fonts/fontawesome-webfont.woff</span><br><span class="line">INFO  Generated: archives/<span class="number">2018</span>/<span class="number">07</span>/<span class="built_in">index</span>.html</span><br><span class="line">INFO  Generated: css/fonts/fontawesome-webfont.eot</span><br><span class="line">INFO  Generated: fancybox/helpers/fancybox_buttons.png</span><br><span class="line">INFO  Generated: css/fonts/FontAwesome.otf</span><br><span class="line">INFO  Generated: fancybox/helpers/jquery.fancybox-buttons.js</span><br><span class="line">INFO  Generated: css/fonts/fontawesome-webfont.svg</span><br><span class="line">INFO  Generated: fancybox/helpers/jquery.fancybox-thumbs.js</span><br><span class="line">INFO  Generated: fancybox/helpers/jquery.fancybox-buttons.css</span><br><span class="line">INFO  Generated: css/images/banner.jpg</span><br><span class="line">INFO  Generated: fancybox/helpers/jquery.fancybox-media.js</span><br><span class="line">INFO  Generated: fancybox/helpers/jquery.fancybox-thumbs.css</span><br><span class="line">INFO  Generated: js/script.js</span><br><span class="line">INFO  Generated: css/fonts/fontawesome-webfont.ttf</span><br><span class="line">INFO  Generated: css/style.css</span><br><span class="line">INFO  Generated: <span class="number">2018</span>/<span class="number">07</span>/<span class="number">17</span>/hello-world/<span class="built_in">index</span>.html</span><br><span class="line">INFO  <span class="number">28</span> <span class="keyword">files</span> generated in <span class="number">352</span> ms</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>部署博客到本地，测试访问</li>
-</ol>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo <span class="keyword">is</span> running at http://localhos<span class="variable">t:4000</span>/. Press Ctrl+C <span class="keyword">to</span> <span class="keyword">stop</span>.</span><br></pre></td></tr></table></figure>
-<h4 id="2-git的下载与安装"><a href="#2-git的下载与安装" class="headerlink" title="2. git的下载与安装"></a>2. git的下载与安装</h4>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/17/使用hexo快速搭建博客/" data-id="cjjp3kgey0001zsma0oxnpn8d" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+  
+    <a href="/2018/07/17/使用hexo快速搭建博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
   
 </article>
-
-
-  
-
 
 </section>
         
