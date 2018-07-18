@@ -230,7 +230,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/18/使用hexo快速搭建博客/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/18/mysql主从复制的安装/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="nengjie">
@@ -249,7 +249,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/18/使用hexo快速搭建博客/" itemprop="url">使用hexo快速搭建博客</a></h1>
+                <a class="post-title-link" href="/2018/07/18/mysql主从复制的安装/" itemprop="url">Mysql主从复制的安装</a></h1>
         
 
         <div class="post-meta">
@@ -300,10 +300,11 @@
 
       
         
-          <p><strong>前言：本文描述了使用Hexo搭建简单的个人博客网站所需要的环境和步骤，通过自定义的主题简单美观，让博客可以通过网站展示出来。下面，让我们一起来学习如何搭建！</strong></p>
+          <p><strong>前言：数据库同步可以提高系统的性能，本文通过详细讲解安装Mysql的过程，同时通过配置相关信息完成mysql的主从复制。</strong> </p>
+<h3 id="1-MySQL的Lunix版的安装"><a href="#1-MySQL的Lunix版的安装" class="headerlink" title="1.MySQL的Lunix版的安装"></a>1.MySQL的Lunix版的安装</h3><h5 id="1-前往mysql官网下载地址下载rpm安装包，上传MySQL-client-5-5-52-1-el6-x86-64-rpm，MySQL-server-5-5-52-1-el6-x86-64-rpmRPM包到opt目录下"><a href="#1-前往mysql官网下载地址下载rpm安装包，上传MySQL-client-5-5-52-1-el6-x86-64-rpm，MySQL-server-5-5-52-1-el6-x86-64-rpmRPM包到opt目录下" class="headerlink" title="1.前往mysql官网下载地址下载rpm安装包，上传MySQL-client-5.5.52-1.el6.x86_64.rpm，MySQL-server-5.5.52-1.el6.x86_64.rpmRPM包到opt目录下"></a>1.前往<a href="https://dev.mysql.com/downloads/mysql/" title="mysql官网下载地址" target="_blank" rel="noopener">mysql官网下载地址</a>下载rpm安装包，上传MySQL-client-5.5.52-1.el6.x86_64.rpm，MySQL-server-5.5.52-1.el6.x86_64.rpmRPM包到opt目录下</h5><h5 id="2-检查当前系统是否安装过mysql"><a href="#2-检查当前系统是否安装过mysql" class="headerlink" title="2.检查当前系统是否安装过mysql"></a>2.检查当前系统是否安装过mysql</h5><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@mysql-master <span class="keyword">opt</span>]# rpm -<span class="keyword">qa</span>|<span class="keyword">grep</span> -i mysql //查询命令</span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# rpm -<span class="keyword">e</span> RPM软件包名（查询出来的名字）//卸载命令</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/07/18/使用hexo快速搭建博客/#more" rel="contents">
+            <a class="btn" href="/2018/07/18/mysql主从复制的安装/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -478,6 +479,130 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/18/使用hexo快速搭建博客/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="nengjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="能杰">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/18/使用hexo快速搭建博客/" itemprop="url">使用hexo快速搭建博客</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-18T09:24:24+08:00">
+                2018-07-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><strong>前言：本文描述了使用Hexo搭建简单的个人博客网站所需要的环境和步骤，通过自定义的主题简单美观，让博客可以通过网站展示出来。下面，让我们一起来学习如何搭建！</strong></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/18/使用hexo快速搭建博客/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/14/SpringIOC原理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -551,130 +676,6 @@
           
             
           
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/11/mysql主从复制的安装/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nengjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="能杰">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/11/mysql主从复制的安装/" itemprop="url">Mysql主从复制的安装</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-11T09:24:24+08:00">
-                2018-07-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>前言：数据库同步可以提高系统的性能，本文通过详细讲解安装Mysql的过程，同时通过配置相关信息完成mysql的主从复制。</strong></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/11/mysql主从复制的安装/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
