@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Mysql," />
+  <meta name="keywords" content="工具," />
 
 
 
@@ -80,14 +80,14 @@
 
 
 <meta name="description" content="1. 准备安装环境 node.js  git  hexo  安装node.js node.js的下载 下载地址  安装时选择默认的配置即可。  运行cmd命令，检查node和npm安装是否成功。   12345node -vv8.11.3npm -v5.6.0 安装git git的下载地址  ​        下载地址  运行Git Bash Here验证安装是否成功  12$ git --ver">
-<meta name="keywords" content="Mysql">
+<meta name="keywords" content="工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用hexo快速搭建博客">
 <meta property="og:url" content="http://yoursite.com/2018/07/18/使用hexo快速搭建博客/index.html">
 <meta property="og:site_name" content="能杰">
 <meta property="og:description" content="1. 准备安装环境 node.js  git  hexo  安装node.js node.js的下载 下载地址  安装时选择默认的配置即可。  运行cmd命令，检查node和npm安装是否成功。   12345node -vv8.11.3npm -v5.6.0 安装git git的下载地址  ​        下载地址  运行Git Bash Here验证安装是否成功  12$ git --ver">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-18T01:37:50.176Z">
+<meta property="og:updated_time" content="2018-07-18T01:46:16.258Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo快速搭建博客">
 <meta name="twitter:description" content="1. 准备安装环境 node.js  git  hexo  安装node.js node.js的下载 下载地址  安装时选择默认的配置即可。  运行cmd命令，检查node和npm安装是否成功。   12345node -vv8.11.3npm -v5.6.0 安装git git的下载地址  ​        下载地址  运行Git Bash Here验证安装是否成功  12$ git --ver">
@@ -400,7 +400,43 @@
 <li>部署博客到本地，测试访问</li>
 </ol>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo <span class="keyword">is</span> running at http://localhos<span class="variable">t:4000</span>/. Press Ctrl+C <span class="keyword">to</span> <span class="keyword">stop</span>.</span><br></pre></td></tr></table></figure>
-<h4 id="2-git的下载与安装"><a href="#2-git的下载与安装" class="headerlink" title="2. git的下载与安装"></a>2. git的下载与安装</h4>
+<h4 id="2-配置GitHub相关项"><a href="#2-配置GitHub相关项" class="headerlink" title="2. 配置GitHub相关项"></a>2. 配置GitHub相关项</h4><ul>
+<li>注册GitHub账号</li>
+<li>创建仓库</li>
+<li>修改_config.yml文件仓库的位置</li>
+<li>自动部署发布工具</li>
+<li>发布到Github</li>
+<li>访问</li>
+</ul>
+<ol>
+<li>注册地址</li>
+</ol>
+<p>​        <a href="https://github.com/" target="_blank" rel="noopener">GitHub官网</a></p>
+<ol start="2">
+<li>创建名字为github注册名的仓库</li>
+</ol>
+<p>​        如账户的名为：nengjie，则仓库的名字为：nengjie.github.io</p>
+<ol start="3">
+<li>修改hexo目录下的_config.yml文件</li>
+</ol>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/nengjie/nengjie.github.io.git</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>输入以下命令安装自动部署发布工具</li>
+</ol>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git  --save</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>输入以下命令发布到github上</li>
+</ol>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong>：第一次发布需要验证github账号</p>
+<ol start="6">
+<li>测试访问</li>
+</ol>
+<p>访问地址：<em><a href="https://nengjie.github.io.git" target="_blank" rel="noopener">https://nengjie.github.io.git</a></em></p>
+<h4 id="3-自定义主题"><a href="#3-自定义主题" class="headerlink" title="3. 自定义主题"></a>3. 自定义主题</h4><ul>
+<li><h4 id="4-config-yml文件的配置项说明"><a href="#4-config-yml文件的配置项说明" class="headerlink" title="4. _config.yml文件的配置项说明"></a>4. _config.yml文件的配置项说明</h4></li>
+</ul>
+<h4 id="5-写博客"><a href="#5-写博客" class="headerlink" title="5. 写博客"></a>5. 写博客</h4><h4 id="6-设置主题"><a href="#6-设置主题" class="headerlink" title="6. 设置主题"></a>6. 设置主题</h4>
       
     </div>
     
@@ -417,7 +453,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Mysql/" rel="tag"># Mysql</a>
+            <a href="/tags/工具/" rel="tag"># 工具</a>
           
         </div>
       
@@ -430,15 +466,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/07/18/mysql主从复制的安装/" rel="next" title="Mysql主从复制的安装">
+                <i class="fa fa-chevron-left"></i> Mysql主从复制的安装
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/18/设计模式/" rel="prev" title="设计模式">
-                设计模式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -528,7 +564,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
@@ -561,7 +597,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-准备安装环境"><span class="nav-number">1.</span> <span class="nav-text">1. 准备安装环境</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装node-js"><span class="nav-number">1.1.</span> <span class="nav-text">安装node.js</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装git"><span class="nav-number">1.2.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装hexo"><span class="nav-number">1.3.</span> <span class="nav-text">安装hexo</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-git的下载与安装"><span class="nav-number">2.</span> <span class="nav-text">2. git的下载与安装</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-准备安装环境"><span class="nav-number">1.</span> <span class="nav-text">1. 准备安装环境</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装node-js"><span class="nav-number">1.1.</span> <span class="nav-text">安装node.js</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装git"><span class="nav-number">1.2.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装hexo"><span class="nav-number">1.3.</span> <span class="nav-text">安装hexo</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-配置GitHub相关项"><span class="nav-number">2.</span> <span class="nav-text">2. 配置GitHub相关项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-自定义主题"><span class="nav-number">3.</span> <span class="nav-text">3. 自定义主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-config-yml文件的配置项说明"><span class="nav-number">4.</span> <span class="nav-text">4. _config.yml文件的配置项说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-写博客"><span class="nav-number">5.</span> <span class="nav-text">5. 写博客</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-设置主题"><span class="nav-number">6.</span> <span class="nav-text">6. 设置主题</span></a></li></ol></div>
             
 
           </div>
