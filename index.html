@@ -260,6 +260,156 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/18/SpringIOC原理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="nengjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="能杰">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/18/SpringIOC原理/" itemprop="url">SpringIOC原理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-18T10:45:41+08:00">
+                2018-07-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/18/mysql主从复制的安装/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -361,26 +511,183 @@
 
       
         
-          
-            <h3 id="1-MySQL的Lunix版的安装"><a href="#1-MySQL的Lunix版的安装" class="headerlink" title="1.MySQL的Lunix版的安装"></a>1.MySQL的Lunix版的安装</h3><h5 id="1-前往mysql官网下载地址下载rpm安装包，上传MySQL-client-5-5-52-1-el6-x86-64-rpm，MySQL-server-5-5-52-1-el6-x86-64-rpmRPM包到opt目录下"><a href="#1-前往mysql官网下载地址下载rpm安装包，上传MySQL-client-5-5-52-1-el6-x86-64-rpm，MySQL-server-5-5-52-1-el6-x86-64-rpmRPM包到opt目录下" class="headerlink" title="1.前往mysql官网下载地址下载rpm安装包，上传MySQL-client-5.5.52-1.el6.x86_64.rpm，MySQL-server-5.5.52-1.el6.x86_64.rpmRPM包到opt目录下"></a>1.前往<a href="https://dev.mysql.com/downloads/mysql/" title="mysql官网下载地址" target="_blank" rel="noopener">mysql官网下载地址</a>下载rpm安装包，上传MySQL-client-5.5.52-1.el6.x86_64.rpm，MySQL-server-5.5.52-1.el6.x86_64.rpmRPM包到opt目录下</h5><h5 id="2-检查当前系统是否安装过mysql"><a href="#2-检查当前系统是否安装过mysql" class="headerlink" title="2.检查当前系统是否安装过mysql"></a>2.检查当前系统是否安装过mysql</h5><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@mysql-master <span class="keyword">opt</span>]# rpm -<span class="keyword">qa</span>|<span class="keyword">grep</span> -i mysql //查询命令</span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# rpm -<span class="keyword">e</span> RPM软件包名（查询出来的名字）//卸载命令</span><br></pre></td></tr></table></figure>
-<p><code>&lt;!--more--&gt;</code>  </p>
-<h5 id="3-安装RPM包"><a href="#3-安装RPM包" class="headerlink" title="3.安装RPM包"></a>3.安装RPM包</h5><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@mysql-master ~]# <span class="keyword">cd</span> /<span class="keyword">opt</span></span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# rpm -ivh MySQL-server-<span class="number">5.5</span>.<span class="number">52</span>-<span class="number">1</span>.el6.x86_64.rpm --force --nodeps</span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# rpm -ivh MySQL-client-<span class="number">5.5</span>.<span class="number">52</span>-<span class="number">1</span>.el6.x86_64.rpm</span><br></pre></td></tr></table></figure>
-<h5 id="4-查看是否安装成功"><a href="#4-查看是否安装成功" class="headerlink" title="4.查看是否安装成功"></a>4.查看是否安装成功</h5><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@mysql-master <span class="keyword">opt</span>]# mysqladmin --<span class="keyword">version</span></span><br><span class="line">mysqladmin  Ver <span class="number">8.42</span> Distrib <span class="number">5.5</span>.<span class="number">52</span>, <span class="keyword">for</span> Linux <span class="keyword">on</span> x86_6</span><br><span class="line"></span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# <span class="keyword">cat</span> /etc/passwd|<span class="keyword">grep</span> mysql</span><br><span class="line">mysq<span class="variable">l:x</span>:<span class="number">496</span>:<span class="number">493</span>:MySQL server:/var/lib/mysq<span class="variable">l:</span>/bin/bash</span><br><span class="line"></span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# <span class="keyword">cat</span> /etc/group|<span class="keyword">grep</span> mysql</span><br><span class="line">mysq<span class="variable">l:x</span>:<span class="number">493</span>:</span><br></pre></td></tr></table></figure>
-<h5 id="5-mysql服务的启动和停止"><a href="#5-mysql服务的启动和停止" class="headerlink" title="5.mysql服务的启动和停止"></a>5.mysql服务的启动和停止</h5><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@mysql-master <span class="keyword">opt</span>]# service mysql start</span><br><span class="line">Starting MySQL...                                          [确定]</span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# <span class="keyword">ps</span> -ef|<span class="keyword">grep</span> mysql</span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# netstat -anp|<span class="keyword">grep</span> <span class="number">3306</span></span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# service mysql <span class="keyword">stop</span></span><br></pre></td></tr></table></figure>
-<h5 id="6-连接mysql并修改密码"><a href="#6-连接mysql并修改密码" class="headerlink" title="6.连接mysql并修改密码"></a>6.连接mysql并修改密码</h5><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">[root@mysql-master <span class="keyword">opt</span>]# mysqladmin -<span class="keyword">u</span> root password</span><br><span class="line">New password: </span><br><span class="line">Confirm <span class="keyword">new</span> password:</span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# mysql -<span class="keyword">u</span> root -<span class="keyword">p</span></span><br><span class="line">Enter password: </span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id <span class="keyword">is</span> <span class="number">2</span></span><br><span class="line">Server <span class="keyword">version</span>: <span class="number">5.5</span>.<span class="number">52</span> MySQL Community Server (GPL)</span><br><span class="line"></span><br><span class="line">Copyright (<span class="keyword">c</span>) <span class="number">2000</span>, <span class="number">2016</span>, Oracle <span class="built_in">and</span>/<span class="built_in">or</span> its affiliates. All rights reserved.</span><br><span class="line">mysql&gt; show databases;</span><br><span class="line">+--------------------+</span><br><span class="line">| Database          |</span><br><span class="line">+--------------------+</span><br><span class="line">| information_schema |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| test              |</span><br><span class="line">+--------------------+</span><br><span class="line"><span class="number">4</span> rows in <span class="keyword">set</span> (<span class="number">0.09</span> sec)</span><br></pre></td></tr></table></figure>
-<h5 id="7-开机自启动mysql服务"><a href="#7-开机自启动mysql服务" class="headerlink" title="7.开机自启动mysql服务"></a>7.开机自启动mysql服务</h5><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@mysql-master <span class="keyword">opt</span>]# chkconfig mysql <span class="keyword">on</span></span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# chkconfig|<span class="keyword">grep</span> mysql</span><br><span class="line">mysql              <span class="number">0</span>:关闭    <span class="number">1</span>:关闭    <span class="number">2</span>:启用    <span class="number">3</span>:启用    <span class="number">4</span>:启用    <span class="number">5</span>:启用    <span class="number">6</span>:关闭</span><br></pre></td></tr></table></figure>
-<h5 id="8-查看软件安装位置（mysql数据库的数据库）"><a href="#8-查看软件安装位置（mysql数据库的数据库）" class="headerlink" title="8.查看软件安装位置（mysql数据库的数据库）"></a>8.查看软件安装位置（mysql数据库的数据库）</h5><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@mysql-master <span class="keyword">opt</span>]# whereis mysql  //查看应用程序或系统命令安装位置</span><br><span class="line">mysq<span class="variable">l:</span> /usr/bin/mysql /usr/lib64/mysql /usr/share/mysql /usr/share/man/man1/mysql.<span class="number">1</span>.gz</span><br><span class="line"></span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# which mysql  //查看应用程序或系统命令的可执行文件路径</span><br><span class="line">/usr/bin/mysql</span><br></pre></td></tr></table></figure>
-<h5 id="9-设置字符集"><a href="#9-设置字符集" class="headerlink" title="9.设置字符集"></a>9.设置字符集</h5><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"># 修改配置文件的位置</span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# <span class="keyword">cp</span> /usr/share/mysql/my-huge.<span class="keyword">cnf</span> /etc/my.<span class="keyword">cnf</span></span><br><span class="line"></span><br><span class="line">#查看mysql的字符集</span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# mysql -<span class="keyword">u</span> root -<span class="keyword">p</span> </span><br><span class="line">Enter password: </span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id <span class="keyword">is</span> <span class="number">5</span></span><br><span class="line">Server <span class="keyword">version</span>: <span class="number">5.5</span>.<span class="number">52</span>-<span class="built_in">log</span> MySQL Community Server (GPL)</span><br><span class="line"></span><br><span class="line">Copyright (<span class="keyword">c</span>) <span class="number">2000</span>, <span class="number">2016</span>, Oracle <span class="built_in">and</span>/<span class="built_in">or</span> its affiliates. All rights reserved.</span><br><span class="line"></span><br><span class="line">Oracle <span class="keyword">is</span> <span class="keyword">a</span> registered trademark of Oracle Corporation <span class="built_in">and</span>/<span class="built_in">or</span> its</span><br><span class="line">affiliates. Other names may <span class="keyword">be</span> trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type <span class="string">'help;'</span> <span class="built_in">or</span> <span class="string">'\h'</span> <span class="keyword">for</span> <span class="keyword">help</span>. Type <span class="string">'\c'</span> <span class="keyword">to</span> clear the current <span class="built_in">input</span> statement.</span><br><span class="line"></span><br><span class="line">mysql&gt; show variables like '%char%';</span><br><span class="line">+--------------------------+----------------------------+</span><br><span class="line">| Variable_name            | Value                      |</span><br><span class="line">+--------------------------+----------------------------+</span><br><span class="line">| character_set_client    | utf8                      |</span><br><span class="line">| character_set_connection | utf8                      |</span><br><span class="line">| character_set_database  | latin1                    |</span><br><span class="line">| character_set_filesystem | binary                    |</span><br><span class="line">| character_set_results    | utf8                      |</span><br><span class="line">| character_set_server    | latin1                    |</span><br><span class="line">| character_set_system    | utf8                      |</span><br><span class="line">| character_sets_dir      | /usr/share/mysql/charsets/ |</span><br><span class="line">+--------------------------+----------------------------+</span><br><span class="line"><span class="number">8</span> rows in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#修改三个地方[增加<span class="number">21</span>行，<span class="number">29</span>-<span class="number">31</span>行，<span class="number">140</span>行的内容]</span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# <span class="keyword">vim</span> /etc/my.<span class="keyword">cnf</span></span><br><span class="line"><span class="number">17</span> [client]</span><br><span class="line"><span class="number">18</span> #password      = your_password</span><br><span class="line"><span class="number">19</span> port            = <span class="number">3306</span></span><br><span class="line"><span class="number">20</span> socket          = /var/lib/mysql/mysql.sock</span><br><span class="line"><span class="number">21</span> default-character-<span class="keyword">set</span>=utf8</span><br><span class="line"></span><br><span class="line"><span class="number">25</span> # The MySQL server</span><br><span class="line"><span class="number">26</span> [mysqld]        </span><br><span class="line"><span class="number">27</span> port            = <span class="number">3306</span></span><br><span class="line"><span class="number">28</span> socket          = /var/lib/mysql/mysql.sock</span><br><span class="line"><span class="number">29</span> character_set_client=utf8</span><br><span class="line"><span class="number">30</span> character_set_server=utf8</span><br><span class="line"><span class="number">31</span> collation_server=utf8_general_ci</span><br><span class="line"></span><br><span class="line"><span class="number">138</span> [mysql]</span><br><span class="line"><span class="number">139</span> <span class="keyword">no</span>-auto-rehash</span><br><span class="line"><span class="number">140</span> default-character-<span class="keyword">set</span>=utf8</span><br><span class="line"></span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# service mysql <span class="keyword">stop</span></span><br><span class="line">Shutting down MySQL...                                    [确定]</span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# service mysql start</span><br><span class="line">Starting MySQL.. </span><br><span class="line"></span><br><span class="line">#登录mysql再次查看字符集</span><br><span class="line">mysql&gt; show variables like '%char%';</span><br><span class="line">+--------------------------+----------------------------+</span><br><span class="line">| Variable_name            | Value                      |</span><br><span class="line">+--------------------------+----------------------------+</span><br><span class="line">| character_set_client    | utf8                      |</span><br><span class="line">| character_set_connection | utf8                      |</span><br><span class="line">| character_set_database  | utf8                      |</span><br><span class="line">| character_set_filesystem | binary                    |</span><br><span class="line">| character_set_results    | utf8                      |</span><br><span class="line">| character_set_server    | utf8                      |</span><br><span class="line">| character_set_system    | utf8                      |</span><br><span class="line">| character_sets_dir      | /usr/share/mysql/charsets/ |</span><br><span class="line">+--------------------------+----------------------------+</span><br><span class="line"><span class="number">8</span> rows in <span class="keyword">set</span> (<span class="number">0.03</span> sec)</span><br></pre></td></tr></table></figure>
-<h3 id="2-MySQL主从复制的配置"><a href="#2-MySQL主从复制的配置" class="headerlink" title="2.MySQL主从复制的配置"></a>2.MySQL主从复制的配置</h3><p>#####1. 主机修改my.cnf配置文件<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">55</span> <span class="built_in">log</span>-bin=mysql-bin # 启动二进制日志</span><br><span class="line"><span class="number">56</span> <span class="built_in">log</span>-err=mysql-err # 启用错误日志</span><br><span class="line"><span class="number">60</span> server-id      = <span class="number">1</span>   # 设置主机server-id</span><br><span class="line"></span><br><span class="line"># 在主机的my.<span class="keyword">cnf</span>文件中配置需要同步的数据库</span><br><span class="line">binlog-ignore-db=information_schema  #忽略同步的数据库</span><br><span class="line">binlog-ignore-db=mysql</span><br><span class="line">binlog-ignore-db=performance_schema</span><br><span class="line">binlog-ignore-db=test</span><br><span class="line"></span><br><span class="line">binlog-<span class="keyword">do</span>-db = shop #需要同步的数据库</span><br></pre></td></tr></table></figure></p>
-<p>#####2. 从机修改my.cnf配置文件<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">60</span> #server-id      = <span class="number">1</span> #将此行注释掉</span><br><span class="line"><span class="number">97</span> server-id      = <span class="number">2</span> #将此行开启</span><br></pre></td></tr></table></figure></p>
-<p>重启主机和从机。</p>
-<p>#####3. 登录mysql设置root用户使用任何IP地址都可以访问方便使用navicat连接测试<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; GRANT ALL PRIVILEGES ON *.* TO `root`@`%` IDENTIFIED BY '123456' WITH GRANT OPTION;</span><br></pre></td></tr></table></figure></p>
-<p>#####4. 在主机上创建用于同步的用户账号并查看数据目前的状态<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt;CREATE USER 'slave01'@'192.168.1.116' IDENTIFIED BY '123456';#创建用户，192.168.1.116从机IP</span><br><span class="line"></span><br><span class="line">mysql&gt; GRANT REPLICATION SLAVE ON *.* TO 'slave01'@'192.168.1.116';#分配权限</span><br><span class="line"></span><br><span class="line">mysql&gt;flush privileges;  #刷新权限</span><br><span class="line"></span><br><span class="line">mysql&gt; show master status;</span><br><span class="line">+------------------+----------+--------------+--------------------------------------------------+</span><br><span class="line">| File            | Position | Binlog_Do_DB | Binlog_Ignore_DB                                |</span><br><span class="line">+------------------+----------+--------------+--------------------------------------------------+</span><br><span class="line">| mysql-bin.<span class="number">000007</span> |      <span class="number">516</span> | shop        | information_schema,mysql,performance_schema,test |</span><br><span class="line">+------------------+----------+--------------+--------------------------------------------------+</span><br><span class="line"><span class="number">1</span> row in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure></p>
-<p>#####5. 在从机上执行如下的sql语句<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; CHANGE MASTER TO MASTER_HOST=<span class="string">'192.168.1.113'</span>,  </span><br><span class="line">    -&gt; MASTER_USER=<span class="string">'slave01'</span>,</span><br><span class="line">    -&gt; MASTER_PASSWORD=<span class="string">'123456'</span>,</span><br><span class="line">    -&gt; MASTER_LOG_FILE=<span class="string">'mysql-bin.000004'</span>,</span><br><span class="line">    -&gt; MASTER_LOG_POS=1642376;</span><br><span class="line">Query OK, <span class="number">0</span> rows affected (<span class="number">0.06</span> sec)</span><br></pre></td></tr></table></figure></p>
-<p>#####6. 在从机上执行如下的sql语句<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; start slave;</span><br><span class="line"></span><br><span class="line">mysql&gt; show slave status\G    #查看同步的状态</span><br><span class="line"></span><br><span class="line">*************************** <span class="number">1</span>. row ***************************</span><br><span class="line">              Slave_IO_State: Waiting <span class="keyword">for</span> master <span class="keyword">to</span> send event</span><br><span class="line">                  Master_Hos<span class="variable">t:</span> <span class="number">192.168</span>.<span class="number">1.113</span></span><br><span class="line">                  Master_User: slave01</span><br><span class="line">                  Master_Por<span class="variable">t:</span> <span class="number">3306</span></span><br><span class="line">                Connect_Retry: <span class="number">60</span></span><br><span class="line">              Master_Log_File: mysql-bin.<span class="number">000004</span></span><br><span class="line">          Read_Master_Log_Po<span class="variable">s:</span> <span class="number">3286131</span></span><br><span class="line">              Relay_Log_File: mysql-slave-relay-bin.<span class="number">000002</span></span><br><span class="line">                Relay_Log_Po<span class="variable">s:</span> <span class="number">253</span></span><br><span class="line">        Relay_Master_Log_File: mysql-bin.<span class="number">000004</span></span><br><span class="line">            Slave_IO_Runnin<span class="variable">g:</span> Yes</span><br><span class="line">            Slave_SQL_Runnin<span class="variable">g:</span> Yes</span><br></pre></td></tr></table></figure></p>
-<p>#####7. 在主机上创建数据库shop并插入数据，测试主从复制是否有效。</p>
+          <h3 id="1-MySQL的Lunix版的安装"><a href="#1-MySQL的Lunix版的安装" class="headerlink" title="1.MySQL的Lunix版的安装"></a>1.MySQL的Lunix版的安装</h3><h5 id="1-前往mysql官网下载地址下载rpm安装包，上传MySQL-client-5-5-52-1-el6-x86-64-rpm，MySQL-server-5-5-52-1-el6-x86-64-rpmRPM包到opt目录下"><a href="#1-前往mysql官网下载地址下载rpm安装包，上传MySQL-client-5-5-52-1-el6-x86-64-rpm，MySQL-server-5-5-52-1-el6-x86-64-rpmRPM包到opt目录下" class="headerlink" title="1.前往mysql官网下载地址下载rpm安装包，上传MySQL-client-5.5.52-1.el6.x86_64.rpm，MySQL-server-5.5.52-1.el6.x86_64.rpmRPM包到opt目录下"></a>1.前往<a href="https://dev.mysql.com/downloads/mysql/" title="mysql官网下载地址" target="_blank" rel="noopener">mysql官网下载地址</a>下载rpm安装包，上传MySQL-client-5.5.52-1.el6.x86_64.rpm，MySQL-server-5.5.52-1.el6.x86_64.rpmRPM包到opt目录下</h5><h5 id="2-检查当前系统是否安装过mysql"><a href="#2-检查当前系统是否安装过mysql" class="headerlink" title="2.检查当前系统是否安装过mysql"></a>2.检查当前系统是否安装过mysql</h5><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@mysql-master <span class="keyword">opt</span>]# rpm -<span class="keyword">qa</span>|<span class="keyword">grep</span> -i mysql //查询命令</span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# rpm -<span class="keyword">e</span> RPM软件包名（查询出来的名字）//卸载命令</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/18/mysql主从复制的安装/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/18/使用hexo快速搭建博客/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="nengjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="能杰">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/18/使用hexo快速搭建博客/" itemprop="url">使用hexo快速搭建博客</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-18T09:24:24+08:00">
+                2018-07-18
+              </time>
+            
+
+            
+
+            
+          </span>
 
           
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="1-准备安装环境"><a href="#1-准备安装环境" class="headerlink" title="1. 准备安装环境"></a>1. 准备安装环境</h4><ul>
+<li>node.js </li>
+<li>git </li>
+<li>hexo</li>
+</ul>
+<h5 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1. 安装node.js"></a>1. 安装node.js</h5><ol>
+<li><p>node.js的下载</p>
+<p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">下载地址</a></p>
+</li>
+<li><p>安装时选择默认的配置即可。</p>
+</li>
+<li><p>运行cmd命令，检查node和npm安装是否成功。</p>
+</li>
+</ol>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">v8.<span class="number">11</span>.<span class="number">3</span></span><br><span class="line"></span><br><span class="line">npm -v</span><br><span class="line"><span class="number">5</span>.<span class="number">6</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/18/使用hexo快速搭建博客/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -565,232 +872,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/18/使用hexo快速搭建博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nengjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="能杰">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/18/使用hexo快速搭建博客/" itemprop="url">使用hexo快速搭建博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-18T09:24:24+08:00">
-                2018-07-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="1-准备安装环境"><a href="#1-准备安装环境" class="headerlink" title="1. 准备安装环境"></a>1. 准备安装环境</h4><ul>
-<li>node.js </li>
-<li>git </li>
-<li>hexo</li>
-</ul>
-<p><code>&lt;!--more--&gt;</code>  </p>
-<h5 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h5><ol>
-<li><p>node.js的下载</p>
-<p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">下载地址</a></p>
-</li>
-<li><p>安装时选择默认的配置即可。</p>
-</li>
-<li><p>运行cmd命令，检查node和npm安装是否成功。</p>
-</li>
-</ol>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">v8.<span class="number">11</span>.<span class="number">3</span></span><br><span class="line"></span><br><span class="line">npm -v</span><br><span class="line"><span class="number">5</span>.<span class="number">6</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure>
-<h5 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h5><ol>
-<li>git的下载地址</li>
-</ol>
-<p>​        <a href="https://git-scm.com/" target="_blank" rel="noopener">下载地址</a></p>
-<ol start="2">
-<li>运行Git Bash Here验证安装是否成功</li>
-</ol>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git --<span class="keyword">version</span></span><br><span class="line">git <span class="keyword">version</span> <span class="number">2.16</span>.<span class="number">2</span>.windows.<span class="number">1</span></span><br></pre></td></tr></table></figure>
-<h5 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h5><ol>
-<li>hexo的镜像下载、安装与验证是否成功</li>
-</ol>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g cnpm --registry=http<span class="variable">s:</span>//registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$ cnpm install -g hexo-<span class="keyword">cl</span></span><br><span class="line"></span><br><span class="line">$ cnpm install hexo --save</span><br><span class="line"></span><br><span class="line">$ hexo -v</span><br><span class="line">hexo-cli: <span class="number">1.1</span>.<span class="number">0</span></span><br><span class="line"><span class="keyword">o</span><span class="variable">s:</span> Windows_NT <span class="number">10.0</span>.<span class="number">17134</span> win32 x64</span><br><span class="line">http_parser: <span class="number">2.8</span>.<span class="number">0</span></span><br><span class="line">node: <span class="number">8.11</span>.<span class="number">3</span></span><br><span class="line">v8: <span class="number">6.2</span>.<span class="number">414.54</span></span><br><span class="line"><span class="keyword">u</span><span class="variable">v:</span> <span class="number">1.19</span>.<span class="number">1</span></span><br><span class="line">zli<span class="variable">b:</span> <span class="number">1.2</span>.<span class="number">11</span></span><br><span class="line">are<span class="variable">s:</span> <span class="number">1.10</span>.<span class="number">1</span>-DEV</span><br><span class="line">module<span class="variable">s:</span> <span class="number">57</span></span><br><span class="line">nghttp2: <span class="number">1.32</span>.<span class="number">0</span></span><br><span class="line">napi: <span class="number">3</span></span><br><span class="line">openss<span class="variable">l:</span> <span class="number">1.0</span>.<span class="number">2</span><span class="keyword">o</span></span><br><span class="line">icu: <span class="number">60.1</span></span><br><span class="line">unicode: <span class="number">10.0</span></span><br><span class="line">cldr: <span class="number">32.0</span></span><br><span class="line">tz: <span class="number">2017</span><span class="keyword">c</span></span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>hexo初始化</li>
-</ol>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br><span class="line">INFO  Cloning hexo-starter <span class="keyword">to</span> D:\Hexo\hexo</span><br><span class="line">Cloning into <span class="string">'D:\Hexo\hexo'</span>...</span><br><span class="line">remote: Counting object<span class="variable">s:</span> <span class="number">65</span>, done.</span><br><span class="line">remote: Total <span class="number">65</span> (delta <span class="number">0</span>), reused <span class="number">0</span> (delta <span class="number">0</span>), pack-reused <span class="number">65</span></span><br><span class="line">Unpacking object<span class="variable">s:</span> <span class="number">100</span>% (<span class="number">65</span>/<span class="number">65</span>), done.</span><br><span class="line">Submodule <span class="string">'themes/landscape'</span> (http<span class="variable">s:</span>//github.<span class="keyword">com</span>/hexojs/hexo-theme-landscape.git) registered <span class="keyword">for</span> path <span class="string">'themes/landscape'</span></span><br><span class="line">Cloning into <span class="string">'D:/Hexo/hexo/themes/landscape'</span>...</span><br><span class="line">remote: Counting object<span class="variable">s:</span> <span class="number">824</span>, done.</span><br><span class="line">remote: Total <span class="number">824</span> (delta <span class="number">0</span>), reused <span class="number">0</span> (delta <span class="number">0</span>), pack-reused <span class="number">823</span></span><br><span class="line">Receiving object<span class="variable">s:</span> <span class="number">100</span>% (<span class="number">824</span>/<span class="number">824</span>), <span class="number">2.54</span> MiB | <span class="number">169.00</span> KiB/s, done.</span><br><span class="line">Resolving delta<span class="variable">s:</span> <span class="number">100</span>% (<span class="number">435</span>/<span class="number">435</span>), done.</span><br><span class="line">Submodule path <span class="string">'themes/landscape'</span>: checked out <span class="string">'73a23c51f8487cfcd7c6deec96ccc7543960d350'</span></span><br><span class="line">INFO  Install dependencies</span><br><span class="line">npm WARN deprecated titlecase@<span class="number">1.1</span>.<span class="number">2</span>: <span class="keyword">no</span> longer maintained</span><br><span class="line"></span><br><span class="line">&gt; nunjucks@<span class="number">3.1</span>.<span class="number">3</span> postinstall D:\Hexo\hexo\node_modules\nunjucks</span><br><span class="line">&gt; node postinstall-build.js src</span><br><span class="line"></span><br><span class="line">npm notice created <span class="keyword">a</span> lockfile <span class="keyword">as</span> package-lock.json. You should commit this <span class="keyword">file</span>.</span><br><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@<span class="number">1.2</span>.<span class="number">4</span> (node_modules\fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform <span class="keyword">for</span> fsevents@<span class="number">1.2</span>.<span class="number">4</span>: wanted &#123;<span class="string">"os"</span>:<span class="string">"darwin"</span>,<span class="string">"arch"</span>:<span class="string">"any"</span>&#125; (curren<span class="variable">t:</span> &#123;<span class="string">"os"</span>:<span class="string">"win32"</span>,<span class="string">"arch"</span>:<span class="string">"x64"</span>&#125;)</span><br><span class="line"></span><br><span class="line">added <span class="number">398</span> packages in <span class="number">151.467</span>s</span><br><span class="line">INFO  Start blogging with Hexo!</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>生成本地博客文件</li>
-</ol>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in <span class="number">158</span> ms</span><br><span class="line">INFO  Generated: <span class="built_in">index</span>.html</span><br><span class="line">INFO  Generated: archives/<span class="built_in">index</span>.html</span><br><span class="line">INFO  Generated: fancybox/fancybox_loading.gif</span><br><span class="line">INFO  Generated: fancybox/jquery.fancybox.css</span><br><span class="line">INFO  Generated: archives/<span class="number">2018</span>/<span class="built_in">index</span>.html</span><br><span class="line">INFO  Generated: fancybox/fancybox_sprite.png</span><br><span class="line">INFO  Generated: fancybox/fancybox_loading@<span class="number">2</span><span class="keyword">x</span>.gif</span><br><span class="line">INFO  Generated: fancybox/blank.gif</span><br><span class="line">INFO  Generated: fancybox/fancybox_overlay.png</span><br><span class="line">INFO  Generated: fancybox/fancybox_sprite@<span class="number">2</span><span class="keyword">x</span>.png</span><br><span class="line">INFO  Generated: fancybox/jquery.fancybox.pack.js</span><br><span class="line">INFO  Generated: fancybox/jquery.fancybox.js</span><br><span class="line">INFO  Generated: css/fonts/fontawesome-webfont.woff</span><br><span class="line">INFO  Generated: archives/<span class="number">2018</span>/<span class="number">07</span>/<span class="built_in">index</span>.html</span><br><span class="line">INFO  Generated: css/fonts/fontawesome-webfont.eot</span><br><span class="line">INFO  Generated: fancybox/helpers/fancybox_buttons.png</span><br><span class="line">INFO  Generated: css/fonts/FontAwesome.otf</span><br><span class="line">INFO  Generated: fancybox/helpers/jquery.fancybox-buttons.js</span><br><span class="line">INFO  Generated: css/fonts/fontawesome-webfont.svg</span><br><span class="line">INFO  Generated: fancybox/helpers/jquery.fancybox-thumbs.js</span><br><span class="line">INFO  Generated: fancybox/helpers/jquery.fancybox-buttons.css</span><br><span class="line">INFO  Generated: css/images/banner.jpg</span><br><span class="line">INFO  Generated: fancybox/helpers/jquery.fancybox-media.js</span><br><span class="line">INFO  Generated: fancybox/helpers/jquery.fancybox-thumbs.css</span><br><span class="line">INFO  Generated: js/script.js</span><br><span class="line">INFO  Generated: css/fonts/fontawesome-webfont.ttf</span><br><span class="line">INFO  Generated: css/style.css</span><br><span class="line">INFO  Generated: <span class="number">2018</span>/<span class="number">07</span>/<span class="number">17</span>/hello-world/<span class="built_in">index</span>.html</span><br><span class="line">INFO  <span class="number">28</span> <span class="keyword">files</span> generated in <span class="number">352</span> ms</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>部署博客到本地，测试访问</li>
-</ol>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo <span class="keyword">is</span> running at http://localhos<span class="variable">t:4000</span>/. Press Ctrl+C <span class="keyword">to</span> <span class="keyword">stop</span>.</span><br></pre></td></tr></table></figure>
-<h4 id="2-配置GitHub相关项"><a href="#2-配置GitHub相关项" class="headerlink" title="2. 配置GitHub相关项"></a>2. 配置GitHub相关项</h4><ul>
-<li>注册GitHub账号</li>
-<li>创建仓库</li>
-<li>修改_config.yml文件仓库的位置</li>
-<li>自动部署发布工具</li>
-<li>发布到Github</li>
-<li>访问</li>
-</ul>
-<ol>
-<li>注册地址</li>
-</ol>
-<p>​        <a href="https://github.com/" target="_blank" rel="noopener">GitHub官网</a></p>
-<ol start="2">
-<li>创建名字为github注册名的仓库</li>
-</ol>
-<p>​        如账户的名为：nengjie，则仓库的名字为：nengjie.github.io</p>
-<ol start="3">
-<li>修改hexo目录下的_config.yml文件</li>
-</ol>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/nengjie/nengjie.github.io.git</span></span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>输入以下命令安装自动部署发布工具</li>
-</ol>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git  --save</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>输入以下命令发布到github上</li>
-</ol>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-<p><strong>注意</strong>：第一次发布需要验证github账号</p>
-<ol start="6">
-<li>测试访问</li>
-</ol>
-<p>访问地址：<em><a href="https://nengjie.github.io.git" target="_blank" rel="noopener">https://nengjie.github.io.git</a></em></p>
-<h4 id="3-自定义主题"><a href="#3-自定义主题" class="headerlink" title="3. 自定义主题"></a>3. 自定义主题</h4><ul>
-<li><h4 id="4-config-yml文件的配置项说明"><a href="#4-config-yml文件的配置项说明" class="headerlink" title="4. _config.yml文件的配置项说明"></a>4. _config.yml文件的配置项说明</h4></li>
-</ul>
-<h4 id="5-写博客"><a href="#5-写博客" class="headerlink" title="5. 写博客"></a>5. 写博客</h4><h4 id="6-设置主题"><a href="#6-设置主题" class="headerlink" title="6. 设置主题"></a>6. 设置主题</h4>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -837,7 +918,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

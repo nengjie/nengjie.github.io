@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="能杰">
 <meta property="og:description" content="1.MySQL的Lunix版的安装1.前往mysql官网下载地址下载rpm安装包，上传MySQL-client-5.5.52-1.el6.x86_64.rpm，MySQL-server-5.5.52-1.el6.x86_64.rpmRPM包到opt目录下2.检查当前系统是否安装过mysql12[root@mysql-master opt]# rpm -qa|grep -i mysql //查询命令">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-18T01:54:09.049Z">
+<meta property="og:updated_time" content="2018-07-18T02:58:13.891Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mysql主从复制的安装">
 <meta name="twitter:description" content="1.MySQL的Lunix版的安装1.前往mysql官网下载地址下载rpm安装包，上传MySQL-client-5.5.52-1.el6.x86_64.rpm，MySQL-server-5.5.52-1.el6.x86_64.rpmRPM包到opt目录下2.检查当前系统是否安装过mysql12[root@mysql-master opt]# rpm -qa|grep -i mysql //查询命令">
@@ -362,7 +362,7 @@
 
       
         <h3 id="1-MySQL的Lunix版的安装"><a href="#1-MySQL的Lunix版的安装" class="headerlink" title="1.MySQL的Lunix版的安装"></a>1.MySQL的Lunix版的安装</h3><h5 id="1-前往mysql官网下载地址下载rpm安装包，上传MySQL-client-5-5-52-1-el6-x86-64-rpm，MySQL-server-5-5-52-1-el6-x86-64-rpmRPM包到opt目录下"><a href="#1-前往mysql官网下载地址下载rpm安装包，上传MySQL-client-5-5-52-1-el6-x86-64-rpm，MySQL-server-5-5-52-1-el6-x86-64-rpmRPM包到opt目录下" class="headerlink" title="1.前往mysql官网下载地址下载rpm安装包，上传MySQL-client-5.5.52-1.el6.x86_64.rpm，MySQL-server-5.5.52-1.el6.x86_64.rpmRPM包到opt目录下"></a>1.前往<a href="https://dev.mysql.com/downloads/mysql/" title="mysql官网下载地址" target="_blank" rel="noopener">mysql官网下载地址</a>下载rpm安装包，上传MySQL-client-5.5.52-1.el6.x86_64.rpm，MySQL-server-5.5.52-1.el6.x86_64.rpmRPM包到opt目录下</h5><h5 id="2-检查当前系统是否安装过mysql"><a href="#2-检查当前系统是否安装过mysql" class="headerlink" title="2.检查当前系统是否安装过mysql"></a>2.检查当前系统是否安装过mysql</h5><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@mysql-master <span class="keyword">opt</span>]# rpm -<span class="keyword">qa</span>|<span class="keyword">grep</span> -i mysql //查询命令</span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# rpm -<span class="keyword">e</span> RPM软件包名（查询出来的名字）//卸载命令</span><br></pre></td></tr></table></figure>
-<p><code>&lt;!--more--&gt;</code>  </p>
+<a id="more"></a>
 <h5 id="3-安装RPM包"><a href="#3-安装RPM包" class="headerlink" title="3.安装RPM包"></a>3.安装RPM包</h5><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@mysql-master ~]# <span class="keyword">cd</span> /<span class="keyword">opt</span></span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# rpm -ivh MySQL-server-<span class="number">5.5</span>.<span class="number">52</span>-<span class="number">1</span>.el6.x86_64.rpm --force --nodeps</span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# rpm -ivh MySQL-client-<span class="number">5.5</span>.<span class="number">52</span>-<span class="number">1</span>.el6.x86_64.rpm</span><br></pre></td></tr></table></figure>
 <h5 id="4-查看是否安装成功"><a href="#4-查看是否安装成功" class="headerlink" title="4.查看是否安装成功"></a>4.查看是否安装成功</h5><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@mysql-master <span class="keyword">opt</span>]# mysqladmin --<span class="keyword">version</span></span><br><span class="line">mysqladmin  Ver <span class="number">8.42</span> Distrib <span class="number">5.5</span>.<span class="number">52</span>, <span class="keyword">for</span> Linux <span class="keyword">on</span> x86_6</span><br><span class="line"></span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# <span class="keyword">cat</span> /etc/passwd|<span class="keyword">grep</span> mysql</span><br><span class="line">mysq<span class="variable">l:x</span>:<span class="number">496</span>:<span class="number">493</span>:MySQL server:/var/lib/mysq<span class="variable">l:</span>/bin/bash</span><br><span class="line"></span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# <span class="keyword">cat</span> /etc/group|<span class="keyword">grep</span> mysql</span><br><span class="line">mysq<span class="variable">l:x</span>:<span class="number">493</span>:</span><br></pre></td></tr></table></figure>
 <h5 id="5-mysql服务的启动和停止"><a href="#5-mysql服务的启动和停止" class="headerlink" title="5.mysql服务的启动和停止"></a>5.mysql服务的启动和停止</h5><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@mysql-master <span class="keyword">opt</span>]# service mysql start</span><br><span class="line">Starting MySQL...                                          [确定]</span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# <span class="keyword">ps</span> -ef|<span class="keyword">grep</span> mysql</span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# netstat -anp|<span class="keyword">grep</span> <span class="number">3306</span></span><br><span class="line">[root@mysql-master <span class="keyword">opt</span>]# service mysql <span class="keyword">stop</span></span><br></pre></td></tr></table></figure>
@@ -408,8 +408,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/18/设计模式/" rel="next" title="设计模式">
-                <i class="fa fa-chevron-left"></i> 设计模式
+              <a href="/2018/07/18/使用hexo快速搭建博客/" rel="next" title="使用hexo快速搭建博客">
+                <i class="fa fa-chevron-left"></i> 使用hexo快速搭建博客
               </a>
             
           </div>
@@ -417,6 +417,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/18/SpringIOC原理/" rel="prev" title="SpringIOC原理">
+                SpringIOC原理 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -493,7 +497,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
